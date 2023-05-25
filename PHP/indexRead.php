@@ -72,7 +72,7 @@ include "config/read.php";
                     font-size: 11px;
                 }
 
-                #LogoutBtn, #db, #af, #sc, #Up, #Del, #EditDat, .floatParent, .btnEdit, .btnDel{
+                #LogoutBtn, #db, #af, #sc, #Up, #Del, #EditDat, .floatParent, .btnEdit, .btnDel,.search-container,.nav-links,.LogoutBtn{
                     visibility: hidden;
                 }
 
