@@ -36,6 +36,7 @@ $emergencycontact = validateInput($_POST['EmergencyContNum']);
 $nameofcontact = validateInput($_POST['ContactName']);
 $relationship = validateInput($_POST['Relationship']);
 $bloodtype = isset($_POST['BloodType']) ? validateInput($_POST['BloodType']) : '';
+$status = validateinput($_POST['Status']);
 
 // ... add more variables for other form fields
 
@@ -136,6 +137,10 @@ if (empty($relationship)) {
 if (empty($bloodtype)) {
     $errors[] = "Last name is required.";
 }
+
+if (empty($status)) {
+    $errors[] = "Last name is required.";
+}
 // ... add validation rules for other fields
 
 // Check for errors
@@ -154,7 +159,7 @@ IdType, IdNum, IssuedName, IssuedState, IssuedDate, ExpiryDate, AddressType, Nat
 City, Street, HouseNum, FatherName, MotherName, EmergencyContNum, ContactName, Relationship, BloodType) 
 VALUES ('$firstName', '$middleName', '$lastName', '$age', '$gender', '$birthdate', '$idType', '$idnum',
 '$issuedname', '$issuedstate', '$issuedate' , '$expirydate', '$addresstype', '$nationality', '$province', '$city', '$street', 
-'$housenumber', '$fathername', '$mothername', '$emergencycontact', '$nameofcontact', '$relationship', '$bloodtype')";
+'$housenumber', '$fathername', '$mothername', '$emergencycontact', '$nameofcontact', '$relationship', '$bloodtype','$status')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record inserted successfully.";

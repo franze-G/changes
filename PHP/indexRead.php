@@ -148,7 +148,7 @@ include "config/read.php";
                     $i++;?>
                 <tr>
                     <th scope = "row"><?=$i?></th>
-                    <td><?php echo $rows['status']?></td>
+                    <td><?php echo $rows['Status']?></td>
                     <td><?php echo $rows['LastName']?></td>
                     <td><?php echo $rows['FirstName']?></td>
                     <td><?php echo $rows['MiddleName']?></td>

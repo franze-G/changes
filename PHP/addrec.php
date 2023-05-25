@@ -326,10 +326,10 @@
               </div>
               <div class="input-field">
                 <label>Status</label>
-                <select name = "status">
+                <select name = "Status">
                   <option disabled selected>Status</option>
-                  <option value="Alive" <?php if(isset($_POST['status']) && $_POST['status'] === 'Alive') echo 'selected'; ?>>Alive</option>
-                  <option value="Diseased" <?php if(isset($_POST['status']) && $_POST['status'] === 'Diseased') echo 'selected'; ?>>Diseased</option>
+                  <option value="Alive" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Alive') echo 'selected'; ?>>Alive</option>
+                  <option value="Diseased" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>Diseased</option>
       
                 </select>
               </div>
@@ -360,7 +360,7 @@ function previewImage(event) {
 </script>
 
           <div class="buttons">
-            <button class="sumbit" name="create">
+            <button class="sumbit" url ="indexread.php" name="create">
               <span class="btnText">Submit</span>
               <i class="uil uil-navigator"></i>
             </button>
