@@ -324,6 +324,15 @@
                                 echo ($_GET['BloodType']); ?>"
                 />
               </div>
+              <div class="input-field">
+                <label>Status</label>
+                <select name = "status">
+                  <option disabled selected>Status</option>
+                  <option value="Alive" <?php if(isset($_POST['status']) && $_POST['status'] === 'Alive') echo 'selected'; ?>>Alive</option>
+                  <option value="Diseased" <?php if(isset($_POST['status']) && $_POST['status'] === 'Diseased') echo 'selected'; ?>>Diseased</option>
+      
+                </select>
+              </div>
             </div>
           </div>
         </div>

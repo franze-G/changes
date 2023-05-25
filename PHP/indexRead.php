@@ -20,20 +20,17 @@ include "config/read.php";
 </head>
 <body>
 
-    <div class="container">
 
-        <nav>
-            <div class="brngyLbl">BARANGAY 48, PASAY CITY</div>
-                <ul class="navItems">
-                    <li id = "db"><a href="indexDashBoard.php">DASHBOARD</li>
-                    <li id = "af"><a href="indexApplicForm.php">ADD REC</li>
-                    <li id = "sc"><a href="indexRead.php">SENIOR CITIZENS</li>
-                </ul>
-
-                <div class="logo">
-                    <a href="#"><img src="pasay-logo-1 (4).png" alt="PasayLogo" id="brngyPic"></i></a>
-                </div>
-        </nav>
+    <nav class="nav">
+        <a href="#" class="brand-name">Barangay 48, Pasay City</a>
+        <ul class="nav-links">
+            <!-- pabago nalang href -->
+            <li><a href="indexDashBoard.php">Dashboard</a></li>
+            <li><a href="addrec.php">Application</a></li>
+            <li><a href="indexRead.php">SC List</a></li>
+        </ul>
+        <img class="logo-png" href="#" src="imgs/etc/pasay-small.png" alt="PasayLogo" id="brngyPic" />
+    </nav>
 
         <style>
 
@@ -134,23 +131,11 @@ include "config/read.php";
                     <th scope = "col" class="tbl-colHeader">Age</th>
                     <th scope = "col" class="tbl-colHeader">Gender</th>
                     <th scope = "col" class="tbl-colHeader">Birth Date</th>
-                    <th scope = "col" class="tbl-colHeader">ID Type</th>
-                    <th scope = "col" class="tbl-colHeader">ID Number</th>
-                    <th scope = "col" class="tbl-colHeader">Issued Name</th>
-                    <th scope = "col" class="tbl-colHeader">Issued State</th>
-                    <th scope = "col" class="tbl-colHeader">Issued Date</th>
-                    <th scope = "col" class="tbl-colHeader">Expiry Date</th>
-                    <th scope = "col" class="tbl-colHeader">Address Type</th>
                     <th scope = "col" class="tbl-colHeader">Nationality</th>
                     <th scope = "col" class="tbl-colHeader">Province</th>
                     <th scope = "col" class="tbl-colHeader">City</th>
                     <th scope = "col" class="tbl-colHeader">Street</th>
                     <th scope = "col" class="tbl-colHeader">House Number</th>
-                    <th scope = "col" class="tbl-colHeader">Father Name</th>
-                    <th scope = "col" class="tbl-colHeader">Mother Name</th>
-                    <th scope = "col" class="tbl-colHeader">Emergency Contact Number</th>
-                    <th scope = "col" class="tbl-colHeader">ContactName</th>
-                    <th scope = "col" class="tbl-colHeader">Relationship</th>
                     <th scope = "col" class="tbl-colHeader">BloodType</th>
                     <th scope = "col" class="tbl-colHeader">SC No.</th>
                     <th scope = "col" class="tbl-colHeader" id ="EditDat">Edit | Delete</th>
@@ -163,29 +148,18 @@ include "config/read.php";
                     $i++;?>
                 <tr>
                     <th scope = "row"><?=$i?></th>
-                    <td><?php echo $rows['Status']?></td>
-                    <td><?=$rows['LastName']?></td>
+                    <td><?php echo $rows['status']?></td>
+                    <td><?php echo $rows['LastName']?></td>
                     <td><?php echo $rows['FirstName']?></td>
                     <td><?php echo $rows['MiddleName']?></td>
                     <td><?php echo $rows['Age']?></td>
                     <td><?php echo $rows['Gender']?></td>
                     <td><?php echo $rows['BirthDate']?></td>
-                    <td><?php echo $rows['IdType']?></td>
-                    <td><?php echo $rows['IdNum']?></td>
-                    <td><?php echo $rows['IssuedName']?></td>
-                    <td><?php echo $rows['IssuedState']?></td>
-                    <td><?php echo $rows['IssuedDate']?></td>
-                    <td><?php echo $rows['AddressType']?></td>
                     <td><?php echo $rows['Nationality']?></td>
                     <td><?php echo $rows['Province']?></td>
                     <td><?php echo $rows['City']?></td>
                     <td><?php echo $rows['Street']?></td>
                     <td><?php echo $rows['HouseNum']?></td>
-                    <td><?php echo $rows['FatherName']?></td>
-                    <td><?php echo $rows['MotherName']?></td>
-                    <td><?php echo $rows['EmergencyContNum']?></td>
-                    <td><?php echo $rows['ContactName']?></td>
-                    <td><?php echo $rows['Relationship']?></td>
                     <td><?php echo $rows['BloodType']?></td>
                     <td><?php echo $rows['ScNum']?></td>
                     <td><a href="UpdRecSection.php?ResidentID=<?=$rows['ResidentID']?>"
