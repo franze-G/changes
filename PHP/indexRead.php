@@ -164,9 +164,7 @@ include "config/read.php";
                     <td><?php echo $rows['Status']?></td>
                     <td><a href="UpdRecSection.php?ResidentID=<?=$rows['ResidentID']?>"
                         class="btnEdit" id="Up">UPDATE</a>
-
-                        <a href="config/delete.php?ResidentID=<?=$rows['ResidentID']?>"
-                        class="btnDel" id="Del">DELETE</a>
+                        
                     </td>
                 </tr>
                 <?php } ?>

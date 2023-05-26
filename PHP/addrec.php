@@ -295,14 +295,14 @@
 
               <div class="input-field">
                 <label>Bloodtype</label>
-                <select name = "Status">
+                <select name = "BloodType">
                   <option disabled selected>Bloodtype</option>
-                  <option value="A+" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Alive') echo 'selected'; ?>>A+</option>
-                  <option value="A-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>A-</option>
-                  <option value="AB+" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>AB+</option>
-                  <option value="AB-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>AB-</option>
-                  <option value="AB-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>O+</option>
-                  <option value="AB-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>O-</option>
+                  <option value="A+" <?php if(isset($_POST['BloodType']) && $_POST['BloodType'] === 'A+') echo 'selected'; ?>>A+</option>
+                  <option value="A-" <?php if(isset($_POST['BloodType']) && $_POST['BloodType'] === 'A-') echo 'selected'; ?>>A-</option>
+                  <option value="AB+" <?php if(isset($_POST['BloodType']) && $_POST['BloodType'] === 'AB+') echo 'selected'; ?>>AB+</option>
+                  <option value="AB-" <?php if(isset($_POST['BloodType']) && $_POST['BloodType'] === 'AB-') echo 'selected'; ?>>AB-</option>
+                  <option value="AB-" <?php if(isset($_POST['BloodType']) && $_POST['BloodType'] === 'O+') echo 'selected'; ?>>O+</option>
+                  <option value="AB-" <?php if(isset($_POST['BloodType']) && $_POST['BloodType'] === 'O-') echo 'selected'; ?>>O-</option>
                 </select>
               </div>
 
