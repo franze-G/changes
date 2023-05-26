@@ -124,7 +124,6 @@ include "config/read.php";
             <thead>
                 <tr id="headerRow">
                     <th scope = "col" class="tbl-colHeader">ResidentID</th>
-                    <th scope = "col" class="tbl-colHeader">Status</th>
                     <th scope = "col" class="tbl-colHeader">LastName</th>
                     <th scope = "col" class="tbl-colHeader">FirstName</th>
                     <th scope = "col" class="tbl-colHeader">MiddleName</th>
@@ -138,6 +137,7 @@ include "config/read.php";
                     <th scope = "col" class="tbl-colHeader">House Number</th>
                     <th scope = "col" class="tbl-colHeader">BloodType</th>
                     <th scope = "col" class="tbl-colHeader">SC No.</th>
+                    <th scope = "col" class="tbl-colHeader">Status</th>
                     <th scope = "col" class="tbl-colHeader" id ="EditDat">Edit | Delete</th>
                 </tr>
             </thead>
@@ -148,7 +148,6 @@ include "config/read.php";
                     $i++;?>
                 <tr>
                     <th scope = "row"><?=$i?></th>
-                    <td><?php echo $rows['Status']?></td>
                     <td><?php echo $rows['LastName']?></td>
                     <td><?php echo $rows['FirstName']?></td>
                     <td><?php echo $rows['MiddleName']?></td>
@@ -162,6 +161,7 @@ include "config/read.php";
                     <td><?php echo $rows['HouseNum']?></td>
                     <td><?php echo $rows['BloodType']?></td>
                     <td><?php echo $rows['ScNum']?></td>
+                    <td><?php echo $rows['Status']?></td>
                     <td><a href="UpdRecSection.php?ResidentID=<?=$rows['ResidentID']?>"
                         class="btnEdit" id="Up">UPDATE</a>
 

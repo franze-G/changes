@@ -156,7 +156,7 @@ if (!empty($errors)) {
 // Prepare and execute the SQL statement
 $sql = "INSERT INTO tblscreg (FirstName, MiddleName, LastName, Age, Gender, BirthDate,
 IdType, IdNum, IssuedName, IssuedState, IssuedDate, ExpiryDate, AddressType, Nationality, Province, 
-City, Street, HouseNum, FatherName, MotherName, EmergencyContNum, ContactName, Relationship, BloodType) 
+City, Street, HouseNum, FatherName, MotherName, EmergencyContNum, ContactName, Relationship, BloodType,Status) 
 VALUES ('$firstName', '$middleName', '$lastName', '$age', '$gender', '$birthdate', '$idType', '$idnum',
 '$issuedname', '$issuedstate', '$issuedate' , '$expirydate', '$addresstype', '$nationality', '$province', '$city', '$street', 
 '$housenumber', '$fathername', '$mothername', '$emergencycontact', '$nameofcontact', '$relationship', '$bloodtype','$status')";
