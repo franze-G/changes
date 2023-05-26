@@ -88,8 +88,9 @@
                   name="Age"
                   placeholder="Enter age"
                   required
-                  value="<?php if(isset($_GET['Age']))
-                                echo ($_GET['Age']); ?>"
+                  min ="60"
+                  max ="100"
+                  value="<?php echo isset($_GET['Age']) ? $_GET['Age'] : ''; ?>"
                 />
               </div>
 
@@ -187,7 +188,7 @@
       
                 </select>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -200,7 +201,7 @@
             <div class="fields">
             <div class="input-field">
                 <label>Address Type</label>
-                <select name = "">
+                <select name = "AddressType">
                   <option disabled selected>Address Type</option>
                   <option value="Permanent" <?php if(isset($_POST['AddressType']) && $_POST['AddressType'] === 'Permanent') echo 'selected'; ?>>Permanent</option>
                   <option value="Temporary" <?php if(isset($_POST['AddressType']) && $_POST['AddressType'] === 'Temporary') echo 'selected'; ?>>Temporary</option>
@@ -272,10 +273,10 @@
                 <label>Name of Guardian</label>
                 <input
                   type="text"
-                  name="Guardian"
+                  name="ContactName"
                   placeholder="Guardian"
-                  value="<?php if(isset($_GET['Guardian']))
-                                echo ($_GET['Guardian']); ?>"
+                  value="<?php if(isset($_GET['ContactName']))
+                                echo ($_GET['ContactName']); ?>"
                 />
               </div>
 
