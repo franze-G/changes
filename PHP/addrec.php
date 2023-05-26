@@ -104,7 +104,7 @@
               </div>
 
               <div class="input-field">
-                <label>Birth Date</label>
+                <label>Birthdate</label>
                 <input
                   type="date"
                   name="BirthDate"
@@ -122,7 +122,7 @@
 
             <div class="fields">
               <div class="input-field">
-                <label>ID Type</label>
+                <label>Type of Valid ID</label>
                 <select name = "IdType">
                   <option disabled selected>Select Valid ID</option>
                   <option value="Senior Citizen ID" <?php if(isset($_POST['IdType']) && $_POST['IdType'] === 'Senior Citizen ID') echo 'selected'; ?>>Senior Citizen ID</option>
@@ -177,6 +177,17 @@
                   value="<?php if(isset($_GET['ExpiryDate']))
                                 echo ($_GET['ExpiryDate']); ?>"/>
               </div>
+
+              <div class="input-field">
+                <label>Status</label>
+                <select name = "Status">
+                  <option disabled selected>Status</option>
+                  <option value="Alive" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Alive') echo 'selected'; ?>>Alive</option>
+                  <option value="Diseased" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>Diseased</option>
+      
+                </select>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -187,15 +198,13 @@
             <span class="title">Address Details</span>
 
             <div class="fields">
-              <div class="input-field">
+            <div class="input-field">
                 <label>Address Type</label>
-                <input
-                  type="text"
-                  name="AddressType"
-                  placeholder="Permanent or Temporary"
-                  value="<?php if(isset($_GET['AddressType']))
-                                echo ($_GET['AddressType']); ?>"
-                />
+                <select name = "">
+                  <option disabled selected>Address Type</option>
+                  <option value="Permanent" <?php if(isset($_POST['AddressType']) && $_POST['AddressType'] === 'Permanent') echo 'selected'; ?>>Permanent</option>
+                  <option value="Temporary" <?php if(isset($_POST['AddressType']) && $_POST['AddressType'] === 'Temporary') echo 'selected'; ?>>Temporary</option>
+                  </select>
               </div>
 
               <div class="input-field">
@@ -260,24 +269,13 @@
 
             <div class="fields">
               <div class="input-field">
-                <label>Father Name</label>
+                <label>Name of Guardian</label>
                 <input
                   type="text"
-                  name="FatherName"
-                  placeholder="Enter father name"
-                  value="<?php if(isset($_GET['FatherName']))
-                                echo ($_GET['FatherName']); ?>"
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Mother Name</label>
-                <input
-                  type="text"
-                  name="MotherName"
-                  placeholder="Enter mother name"
-                  value="<?php if(isset($_GET['MotherName']))
-                                echo ($_GET['MotherName']); ''; ?>"
+                  name="Guardian"
+                  placeholder="Guardian"
+                  value="<?php if(isset($_GET['Guardian']))
+                                echo ($_GET['Guardian']); ?>"
                 />
               </div>
 
@@ -291,55 +289,36 @@
                                 echo ($_GET['EmergencyContNum']); ?>"
                 />
               </div>
+             
+              
 
               <div class="input-field">
-                <label>Name of Contact</label>
-                <input
-                  type="text"
-                  name="ContactName"
-                  placeholder="Enter name of contact"
-                  value="<?php if(isset($_GET['ContactName']))
-                                echo ($_GET['ContactName']); ?>"
-                />
+                <label>Bloodtype</label>
+                <select name = "Status">
+                  <option disabled selected>Bloodtype</option>
+                  <option value="A+" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Alive') echo 'selected'; ?>>A+</option>
+                  <option value="A-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>A-</option>
+                  <option value="AB+" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>AB+</option>
+                  <option value="AB-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>AB-</option>
+                  <option value="AB-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>O+</option>
+                  <option value="AB-" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>O-</option>
+                </select>
               </div>
 
               <div class="input-field">
                 <label>Relationship</label>
-                <input
-                  type="text"
-                  name="Relationship"
-                  placeholder="Enter relationship"
-                  value="<?php if(isset($_GET['Relationship']))
-                                echo ($_GET['Relationship']); ?>"
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Blood Type</label>
-                <input
-                  type="text"
-                  name="BloodType"
-                  placeholder="Enter blood type"
-                  value="<?php if(isset($_GET['BloodType']))
-                                echo ($_GET['BloodType']); ?>"
-                />
-              </div>
-              <div class="input-field">
-                <label>Status</label>
-                <select name = "Status">
-                  <option disabled selected>Status</option>
-                  <option value="Alive" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Alive') echo 'selected'; ?>>Alive</option>
-                  <option value="Diseased" <?php if(isset($_POST['Status']) && $_POST['Status'] === 'Diseased') echo 'selected'; ?>>Diseased</option>
+                <select name = "Relationship">
+                  <option disabled selected>Relationship</option>
+                  <option value="Child" <?php if(isset($_POST['Relationship']) && $_POST['Relationship'] === 'Child') echo 'selected'; ?>>Child</option>
+                  <option value="Caretaker" <?php if(isset($_POST['Relationship']) && $_POST['Relationship'] === 'Caretaker') echo 'selected'; ?>>Caretaker</option>
       
                 </select>
               </div>
+
+
             </div>
           </div>
         </div>
-
-        <div class="form third">
-          <div class="details ID">
-            <span class="title">Identification</span>
 
 <script>
 function previewImage(event) {
